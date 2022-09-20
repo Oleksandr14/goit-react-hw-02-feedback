@@ -6,4 +6,5 @@ export const AppContainer = styled.div`
 
 export const Title = styled.h2`
   margin-bottom: ${p => p.theme.space[4]}px;
+  color: ${p => p.theme.colors.primary};
 `;

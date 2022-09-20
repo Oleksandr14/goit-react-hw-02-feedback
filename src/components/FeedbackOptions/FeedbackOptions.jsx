@@ -2,14 +2,13 @@ import PropTypes from 'prop-types';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { Title, Button } from './FeedbackOptions.styled';
-import { Box } from '../Box';
+import { Title, Button, List } from './FeedbackOptions.styled';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback, title }) => {
   return (
-    <Box as="ul">
-      <Title>Please leave feedback</Title>
-      <Box display="flex" gridGap={3}>
+    <>
+      <Title>{title}</Title>
+      <List>
         {options.map(option => {
           return (
             <li key={uuidv4()}>
@@ -23,8 +22,8 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             </li>
           );
         })}
-      </Box>
-    </Box>
+      </List>
+    </>
   );
 };
 

@@ -8,6 +8,7 @@ export const theme = {
     accent: '#03fcf8',
     accentOpacity: 'RGBA(14, 213, 221, 0.21)',
     muted: '#f6f6f6',
+    red: '#ff0000',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

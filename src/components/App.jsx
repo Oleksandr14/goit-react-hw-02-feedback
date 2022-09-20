@@ -9,6 +9,8 @@ import { Section } from './Section/Section';
 
 import { Notification } from './Notification/Notification';
 
+import { Box } from './Box';
+
 export class App extends Component {
   state = {
     good: 0,
@@ -28,9 +30,17 @@ export class App extends Component {
     const positiveFeedback = Math.round((good * 100) / totalFeedback);
     return (
       <div>
-        <div>
+        <Box
+          width={480}
+          ml="auto"
+          mr="auto"
+          boxShadow={
+            '0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2)'
+          }
+        >
           <Section>
             <FeedbackOptions
+              title="Please leave feedback"
               options={Object.keys(this.state)}
               onLeaveFeedback={this.leaveFeedback}
             />
@@ -49,7 +59,7 @@ export class App extends Component {
               <Notification message="There is no feedback" />
             )}
           </Section>
-        </div>
+        </Box>
         <GlobalStyle />
       </div>
     );
