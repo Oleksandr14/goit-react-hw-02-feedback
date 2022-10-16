@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 
-import { v4 as uuidv4 } from 'uuid';
-
 import { Title, Button, List } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback, title }) => {
@@ -11,7 +9,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback, title }) => {
       <List>
         {options.map(option => {
           return (
-            <li key={uuidv4()}>
+            <li key={option}>
               <Button
                 Button
                 type="button"
